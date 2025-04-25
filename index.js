@@ -6,9 +6,10 @@ Date : 2025-04-24
 */
 
 // Dependencies
-const http = require('http');
+const http = require('http'); // Importing the http module to create a server
+const {handleReqRes} = require('./helpers/handleReqRes'); // Importing the handleReqRes module  
 
-// app object - module scaffolding
+// app object - module scaffolding 
 const app = {};
 
 // configuration
@@ -17,9 +18,7 @@ app.config = {
 };
 
 // handle request and response
-app.handleReqRes = (req, res) => {
-    res.end('Hello World!');
-};
+app.handleReqRes = handleReqRes; // Function to handle incoming requests and responses  
 
 // create server
 app.createServer = () => {
